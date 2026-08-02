@@ -1,0 +1,2 @@
+modelo,estrategia,n_test,MAE,RMSE,MAPE,R2,R2_log
+GNNWR,Holdout20%,1011,48.6504,101.2187,29.2551,0.7942,0.8043

@@ -1,0 +1,2 @@
+modelo,estrategia,n_test,MAE,RMSE,MAPE,R2,R2_log,smearing_factor
+RF,Holdout20%,1011,37.6126,76.9935,20.8101,0.8809,0.851,1.003332

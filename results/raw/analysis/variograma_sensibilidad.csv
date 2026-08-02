@@ -1,0 +1,16 @@
+serie,maxlag_km,modelo,rango_m,rango_km,rmse_variograma,bloque_conservador
+valor_m2_raw,3,exponential,2002.5,2.002,1818.914938,si
+valor_m2_raw,5,exponential,5000.0,5.0,5367.403251,si
+valor_m2_raw,7,exponential,7000.0,7.0,5335.792924,no
+valor_m2_raw,10,exponential,6105.2,6.105,5400.666181,no
+valor_m2_raw,15,exponential,5178.1,5.178,5742.385035,si
+log_valor_m2,3,exponential,3000.0,3.0,0.012922,si
+log_valor_m2,5,spherical,5000.0,5.0,0.02697,si
+log_valor_m2,7,spherical,6829.4,6.829,0.025556,no
+log_valor_m2,10,exponential,10000.0,10.0,0.022658,no
+log_valor_m2,15,exponential,14506.7,14.507,0.013726,no
+residuales_OLS,3,exponential,1545.8,1.546,0.005488,si
+residuales_OLS,5,exponential,1711.9,1.712,0.004122,si
+residuales_OLS,7,exponential,1996.8,1.997,0.0067,si
+residuales_OLS,10,exponential,2247.6,2.248,0.006106,si
+residuales_OLS,15,exponential,2254.7,2.255,0.008828,si

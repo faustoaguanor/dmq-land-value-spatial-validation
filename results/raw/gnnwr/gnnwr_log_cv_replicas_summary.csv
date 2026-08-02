@@ -1,0 +1,3 @@
+estrategia,n_seeds,RMSE_mean,RMSE_std,R2_mean,R2_std
+RandomKFold,5,92.0048,0.9511,0.8306,0.0037
+SpatialBlock,5,98.4744,1.7718,0.6307,0.0108

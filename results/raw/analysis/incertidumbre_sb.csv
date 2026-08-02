@@ -1,0 +1,9 @@
+modelo,estrategia,n_seeds,RMSE_media,sigma_seed,sigma_fold,ratio_fold_seed,IC95_lo,IC95_hi
+GNNWR,RandomKFold,5,91.47,0.97,7.44,7.6,90.26,92.68
+GNNWR,SpatialBlock,5,98.12,1.88,53.4,28.4,95.79,100.45
+SANNWR,RandomKFold,5,90.63,2.09,6.11,2.9,88.03,93.23
+SANNWR,SpatialBlock,5,103.46,2.48,56.15,22.7,100.39,106.54
+GSAWR,RandomKFold,5,97.06,4.43,6.31,1.4,91.56,102.56
+GSAWR,SpatialBlock,5,111.46,7.81,60.8,7.8,101.76,121.16
+MLP,RandomKFold,5,101.73,2.45,9.38,3.8,98.7,104.77
+MLP,SpatialBlock,5,796.13,1524.61,1566.01,1.0,-1096.92,2689.18

@@ -1,0 +1,2 @@
+modelo,seeds,n_replicas,RMSE_mean,RMSE_std,MAE_mean,MAE_std,MAPE_mean,MAPE_std,R2_mean,R2_std
+SANNWR-real,"[42, 2011, 456, 777, 2026, 99, 1234, 888, 314, 7]",10,92.6357,2.727,44.4691,0.8551,30.511,1.1014,0.8275,0.0101

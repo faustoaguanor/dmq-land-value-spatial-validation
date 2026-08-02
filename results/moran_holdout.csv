@@ -1,0 +1,6 @@
+model,moran_i,p_permutation,reduction_vs_ols_pct
+OLS,0.341,0.001,0
+SANNWR,0.100,0.001,71
+GNNWR,0.097,0.001,72
+GWR,0.086,0.001,75
+Random Forest,0.055,0.001,84

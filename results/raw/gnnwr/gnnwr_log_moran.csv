@@ -1,0 +1,5 @@
+modelo,estrategia,I,EI
+GNNWR,RandomKFold,0.187804,-0.000248
+GNNWR,SpatialBlock,0.453139,-0.000248
+GNNWR,SpatialBlock_buf,0.721598,-0.000248
+GNNWR,Holdout20%,0.097076,-0.00099

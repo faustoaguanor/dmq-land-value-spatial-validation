@@ -1,0 +1,57 @@
+# Datos restringidos y derivados identificables
+datos/*
+!datos/README.md
+datos_fuente/
+data_pipeline/output/
+data_split/*.csv
+spatial_cv/output/
+**/*predictions*.csv
+**/*predicciones*.csv
+**/*predio*.csv
+**/map_data*.csv
+
+# Formatos geoespaciales y bases originales
+*.gpkg
+*.gdb/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.tif
+*.tiff
+
+# Modelos, ejecuciones y artefactos grandes
+**/output/
+**/output_log/
+**/output_log_*/
+*.pt
+*.pth
+*.onnx
+*.zip
+*.log
+
+# Entornos y cachés
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Configuración local y asistentes
+.env
+.env.*
+.vscode/
+.idea/
+.claude/
+.agents/
+CLAUDE.md
+AGENTS.md
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+.pr-body.md

@@ -1,0 +1,2 @@
+modelo,estrategia,n_test,MAE,RMSE,MAPE,R2,R2_log
+SANNWR-real,Holdout20%,1011,44.3669,92.6306,31.1363,0.8276,0.8073
