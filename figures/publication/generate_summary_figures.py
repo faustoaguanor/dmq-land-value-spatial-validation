@@ -40,14 +40,22 @@ def validation_comparison() -> None:
 
     bars = [
         ax.bar(x - width, conjunto_prueba["rmse"], width, label="Conjunto de prueba 20 %", color="#56B4E9"),
-        ax.bar(x, validacion_aleatoria["rmse_mean"], width, label="Validación cruzada aleatoria", color="#0072B2"),
+        ax.bar(
+            x,
+            validacion_aleatoria["rmse_mean"],
+            width,
+            yerr=validacion_aleatoria["rmse_sd"],
+            capsize=3,
+            label="Validación cruzada aleatoria",
+            color="#0072B2",
+        ),
         ax.bar(
             x + width,
             bloques_espaciales["rmse_mean"],
             width,
             yerr=bloques_espaciales["rmse_sd_regions"],
             capsize=3,
-            label="Validación por bloques espaciales (± DE entre regiones)",
+            label="Validación por bloques espaciales",
             color="#D55E00",
             alpha=0.88,
         ),
@@ -66,7 +74,7 @@ def validation_comparison() -> None:
     fig.text(
         0.5,
         0.015,
-        "Conjunto de prueba: una partición fija. Validación cruzada aleatoria: media de 5 particiones. "
+        "Conjunto de prueba: una partición fija. Validación cruzada aleatoria: media ± DE de 5 particiones. "
         "Validación por bloques espaciales: media ± DE de 5 regiones.",
         ha="center",
         fontsize=9,

@@ -45,6 +45,13 @@ class PublicRepositoryContracts(unittest.TestCase):
         self.assertAlmostEqual(float(rows[0]["rmse"]), 76.99)
         self.assertAlmostEqual(float(rows[-1]["rmse"]), 139.01)
 
+    def test_validation_figure_reports_both_cross_validation_deviations(self):
+        source = (ROOT / "figures" / "publication" / "generate_summary_figures.py").read_text(encoding="utf-8")
+        self.assertIn('yerr=validacion_aleatoria["rmse_sd"]', source)
+        self.assertIn('yerr=bloques_espaciales["rmse_sd_regions"]', source)
+        self.assertIn("Validación cruzada aleatoria: media ± DE de 5 particiones", source)
+        self.assertIn("Validación por bloques espaciales: media ± DE de 5 regiones", source)
+
     def test_markdown_uses_final_thesis_terminology(self):
         forbidden = ("—", "Holdout", "holdout", "RandomKFold", "SpatialBlock", " fold", "fold ")
         found = []
