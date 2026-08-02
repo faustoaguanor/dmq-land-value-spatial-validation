@@ -49,9 +49,13 @@ Los archivos derivados sensibles permanecen ignorados por Git.
 - Validación cruzada aleatoria: cinco particiones sobre el conjunto de entrenamiento.
 - Validación por bloques espaciales: cinco bloques de 5.621,8 m; separación geográfica parcial.
 
-### Análisis exploratorio de separación estricta
+Son los tres esquemas que compara la tesis. Una versión anterior del trabajo evaluó además una zona de exclusión mínima de 2.530 m alrededor de cada región de prueba; ese cuarto escenario se retiró y su código ya no se publica. La distancia sobrevive con otro uso: 2.530 m es el tamaño de celda del remuestreo espacial con que se estiman los intervalos de confianza, y procede del alcance de la dependencia entre residuos que calcula `spatial_cv/diagnostico_buffer.py`.
 
-El código conserva un análisis complementario con una zona de exclusión mínima de 2.530 m alrededor de cada región de prueba. Este escenario no constituye un cuarto esquema principal ni alimenta las tablas finales de comparación. En la tesis definitiva, 2.530 m se utiliza como tamaño de celda del remuestreo espacial empleado para estimar intervalos de confianza.
+## Modelos publicados
+
+La tesis compara cinco modelos: OLS, GWR, Random Forest, GNNWR y SANNWR. El directorio `modelos/` contiene además las variantes que el trabajo ejecutó y que los anexos documentan o que la consolidación de `analisis/analisis_log.py` sigue leyendo: MLP, GSAWR, GWR sobre 17 variables y la variante de SANNWR con grilla de referencia. Se conservan para que el análisis sea ejecutable de extremo a extremo y para dejar constancia de lo que se probó, no porque el documento las reporte.
+
+El SANNWR canónico es `modelos/sannwr/sannwr_real_log.py`, con sus réplicas en `sannwr_real_log_replicas.py` y `sannwr_real_log_cv_replicas.py`. Los archivos `sannwr_log*.py` corresponden a la variante con grilla.
 
 ## Semillas
 

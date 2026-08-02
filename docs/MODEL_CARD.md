@@ -4,7 +4,7 @@
 
 Comparar modelos de predicción del precio de oferta del suelo urbano bajo interpolación y separación espacial en el Distrito Metropolitano de Quito.
 
-## Modelos focales
+## Modelos comparados
 
 - OLS: referencia lineal global.
 - GWR: regresión local con ancho de banda seleccionado dentro de cada partición e intercepto no penalizado.
@@ -31,7 +31,7 @@ Comparar modelos de predicción del precio de oferta del suelo urbano bajo inter
 - Un solo período de mercado, sin validación temporal independiente.
 - Cinco regiones espaciales y una única geometría de bloques.
 - Multicolinealidad severa entre variables de accesibilidad.
-- Autocorrelación residual significativa en todos los modelos focales.
+- Autocorrelación residual significativa en los cinco modelos.
 - Tendencia a subestimar sectores de mayor valor.
 - El conjunto de prueba fue reutilizado durante el desarrollo y se interpreta como evidencia descriptiva interna.
 

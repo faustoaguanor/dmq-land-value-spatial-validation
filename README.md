@@ -54,8 +54,8 @@ Consulta [`DATA_AVAILABILITY.md`](DATA_AVAILABILITY.md) para conocer las fuentes
 ```text
 ├── data_pipeline/       integración de las seis fuentes institucionales
 ├── data_split/          generación determinista del conjunto de prueba
-├── spatial_cv/          validación aleatoria, bloques espaciales y separación estricta
-├── modelos/             modelos focales y variantes de anexo
+├── spatial_cv/          validación aleatoria y bloques espaciales calibrados
+├── modelos/             los cinco modelos comparados y las variantes de anexo
 ├── analisis/            inferencia, sensibilidad e interpretabilidad
 ├── eda/                 análisis exploratorio reproducible
 ├── figures/             scripts de figuras; sin datos cartográficos publicados
@@ -110,7 +110,7 @@ python spatial_cv/pipeline_bloques.py
 python spatial_cv/check_spatial_separation.py
 ```
 
-### 3. Ejecutar modelos focales
+### 3. Ejecutar los cinco modelos
 
 ```bash
 python modelos/ols/ols_log.py
@@ -126,8 +126,8 @@ python modelos/sannwr/sannwr_real_log.py
 python modelos/baselines/baselines_tabulares_replicas.py
 python modelos/gnnwr/gnnwr_log_replicas.py
 python modelos/gnnwr/gnnwr_log_cv_replicas.py
-python modelos/sannwr/sannwr_log_replicas.py
-python modelos/sannwr/sannwr_log_cv_replicas.py
+python modelos/sannwr/sannwr_real_log_replicas.py
+python modelos/sannwr/sannwr_real_log_cv_replicas.py
 python analisis/analisis_log.py
 python analisis/tost_equivalencia.py
 python analisis/moran_significancia.py
