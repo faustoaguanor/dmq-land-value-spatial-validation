@@ -38,12 +38,23 @@ class PublicRepositoryContracts(unittest.TestCase):
                 header = {column.strip().lower() for column in next(csv.reader(handle))}
             self.assertFalse(header & forbidden_columns, path.name)
 
-    def test_holdout_ranking_matches_thesis(self):
-        with (ROOT / "results" / "holdout.csv").open(encoding="utf-8", newline="") as handle:
+    def test_conjunto_prueba_ranking_matches_thesis(self):
+        with (ROOT / "results" / "conjunto_prueba.csv").open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
         self.assertEqual([row["model"] for row in rows], ["Random Forest", "SANNWR", "GWR", "GNNWR", "OLS"])
         self.assertAlmostEqual(float(rows[0]["rmse"]), 76.99)
         self.assertAlmostEqual(float(rows[-1]["rmse"]), 139.01)
+
+    def test_markdown_uses_final_thesis_terminology(self):
+        forbidden = ("—", "Holdout", "holdout", "RandomKFold", "SpatialBlock", " fold", "fold ")
+        found = []
+        for path in ROOT.rglob("*.md"):
+            if ".git" in path.parts:
+                continue
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            if any(term in text for term in forbidden):
+                found.append(path.relative_to(ROOT).as_posix())
+        self.assertEqual(found, [])
 
 
 if __name__ == "__main__":

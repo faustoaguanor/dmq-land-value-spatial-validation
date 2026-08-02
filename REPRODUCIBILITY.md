@@ -35,24 +35,27 @@ DMQ_DATA_DIR/
 ## Pipeline
 
 1. `data_pipeline/pipeline.py`: integra las fuentes y escribe `datos/dataset.gpkg`.
-2. `data_split/create_split.py`: genera el holdout fijo 80/20.
-3. `spatial_cv/pipeline_bloques.py`: construye los folds espaciales.
+2. `data_split/create_split.py`: genera el conjunto de prueba fijo 80/20.
+3. `spatial_cv/pipeline_bloques.py`: construye las particiones espaciales.
 4. Los scripts de `modelos/` entrenan y generan métricas.
 5. `analisis/` consolida inferencia, sensibilidad e interpretabilidad.
 6. `figures/` reconstruye las figuras a partir de las salidas.
 
 Los archivos derivados sensibles permanecen ignorados por Git.
 
-## Esquemas de evaluación
+## Esquemas principales de evaluación
 
-- Holdout 20 %: 4.040 observaciones de entrenamiento y 1.011 de prueba; interpolación interna.
-- RandomKFold: cinco particiones aleatorias sobre el conjunto de entrenamiento.
-- SpatialBlock: cinco bloques de 5.621,8 m; separación geográfica parcial.
-- SpatialBlock con buffer: análisis exploratorio con exclusión mínima de 2.530 m alrededor del test.
+- Conjunto de prueba del 20 %: 4.040 observaciones de entrenamiento y 1.011 de prueba; interpolación interna.
+- Validación cruzada aleatoria: cinco particiones sobre el conjunto de entrenamiento.
+- Validación por bloques espaciales: cinco bloques de 5.621,8 m; separación geográfica parcial.
+
+### Análisis exploratorio de separación estricta
+
+El código conserva un análisis complementario con una zona de exclusión mínima de 2.530 m alrededor de cada región de prueba. Este escenario no constituye un cuarto esquema principal ni alimenta las tablas finales de comparación. En la tesis definitiva, 2.530 m se utiliza como tamaño de celda del remuestreo espacial empleado para estimar intervalos de confianza.
 
 ## Semillas
 
-- Holdout, diez réplicas: `42, 2011, 456, 777, 2026, 99, 1234, 888, 314, 7`.
+- Conjunto de prueba, diez réplicas: `42, 2011, 456, 777, 2026, 99, 1234, 888, 314, 7`.
 - Validación cruzada neuronal, cinco réplicas: `42, 2011, 456, 777, 2026`.
 - Random Forest canónico: `42`.
 
