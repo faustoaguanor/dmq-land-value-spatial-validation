@@ -1,0 +1,2 @@
+modelo,seeds,n_replicas,RMSE_mean,RMSE_std,MAE_mean,MAE_std,MAPE_mean,MAPE_std,R2_mean,R2_std
+GNNWR,"[42, 2011, 456, 777, 2026, 99, 1234, 888, 314, 7]",10,98.0823,3.5636,48.1876,1.1791,27.9387,0.8231,0.8065,0.014

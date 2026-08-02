@@ -1,0 +1,19 @@
+# Dependencias del proyecto — replicacion/
+# Instalar con:
+#   .venv/Scripts/pip install -r requirements.txt
+#
+# PyTorch se instala aparte porque las ruedas CUDA no estan en el indice PyPI
+# por defecto. Para CUDA 12.1 (GPU NVIDIA):
+#   .venv/Scripts/pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+geopandas==1.1.2
+scikit-learn==1.8.0
+scikit-gstat==1.0.23
+mgwr==2.2.1
+statsmodels==0.14.6
+matplotlib==3.10.8
+numpy==2.4.2
+pandas==3.0.1
+scipy==1.17.1
+libpysal==4.14.1
+pytest==9.0.2

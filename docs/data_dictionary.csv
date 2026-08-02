@@ -1,0 +1,30 @@
+variable,role,description,unit_or_type,source
+predio_join,identifier,Clave de enlace catastral; nunca predictor,integer restricted,Dirección Metropolitana de Catastro
+valor_m2,target,Precio de oferta observado por metro cuadrado,USD/m2,Investigación de mercado DMC 2024-2025
+suscept_codigo,predictor,Susceptibilidad a movimientos en masa,ordinal 1-4,DMOT_2
+pc_pnbi,predictor,Población con necesidades básicas insatisfechas,percent,Atlas Socioeconómico DMQ / INEC
+dist_metro,predictor,Distancia a la estación de Metro más cercana,meters,DMOT_1
+dist_centr_metro,predictor,Distancia a la centralidad metropolitana más cercana,meters,PUGS 2024 / DMOT_1
+dist_centr_zonal,predictor,Distancia a la centralidad zonal más cercana,meters,PUGS 2024 / DMOT_1
+dist_cc,predictor,Distancia al centro comercial moderno más cercano,meters,DMOT_1
+dist_universidad,predictor,Distancia al nodo universitario más cercano,meters,DMOT_1
+dist_hospital,predictor,Distancia al hospital o clínica más cercano,meters,DMOT_1
+dist_parque_metro,predictor,Distancia al parque metropolitano más cercano,meters,DMOT_1
+dist_industrial,predictor,Distancia a la zona industrial más cercana,meters,DMOT_1
+dist_via_principal,predictor,Distancia a la vía principal más cercana,meters,PUGS 2024 / DMOT_1
+uso_suelo_cod,predictor,Clasificación normativa de uso del suelo,nominal categorical,PUGS 2024
+cos_num,predictor,Coeficiente de ocupación del suelo en planta baja,ratio 0-1,PUGS 2024
+dist_quebrada,predictor,Distancia a la quebrada más cercana,meters,DMOT_1
+dist_mercado_mayorista,predictor,Distancia al mercado mayorista más cercano,meters,DMOT_1
+dist_plataforma_gub,predictor,Distancia a la Plataforma Gubernamental,meters,DMOT_1
+log_area,predictor,Logaritmo natural del área del terreno,log(m2),SIREC-Q
+frente_m,predictor,Longitud del frente del predio,meters,SIREC-Q
+area_const_m2,predictor,Área construida,m2,SIREC-Q
+tiene_const,predictor,Indicador de presencia de construcción,binary 0/1,SIREC-Q
+num_pisos,predictor,Número de pisos,count,SIREC-Q
+antiguedad,predictor,Antigüedad de la edificación,years,SIREC-Q
+topografia_factor,predictor,Factor catastral de topografía,ratio,SIREC-Q
+conservacion_cod,predictor,Estado de conservación,ordinal 0-4,SIREC-Q
+acabados_cod,predictor,Calidad de acabados,ordinal 0-5,SIREC-Q
+es_ph,predictor,Indicador de propiedad horizontal,binary 0/1,SIREC-Q
+pendiente_grados,predictor,Pendiente media del terreno por predio,degrees,MDT DMC 2010 5m SIRES-DMQ

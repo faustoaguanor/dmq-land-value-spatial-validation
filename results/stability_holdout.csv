@@ -1,0 +1,4 @@
+model,rmse_mean,rmse_sd,mae_mean,mae_sd,r2_mean,r2_sd,cv_pct,n_seeds
+Random Forest,76.75,0.59,37.69,0.17,0.882,0.002,0.8,10
+SANNWR,92.64,2.73,44.47,0.86,0.828,0.010,2.9,10
+GNNWR,98.08,3.56,48.19,1.18,0.807,0.014,3.6,10

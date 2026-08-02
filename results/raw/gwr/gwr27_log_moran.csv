@@ -1,0 +1,5 @@
+modelo,estrategia,I,EI,p_sim,z_sim,tipo
+GWR-27,RandomKFold,0.19692,-0.000248,0.001,27.1228,CV_OOS
+GWR-27,SpatialBlock,0.28346,-0.000248,0.001,39.4077,CV_OOS
+GWR-27,SpatialBlock_buf,0.704854,-0.000248,0.001,93.849,CV_OOS
+GWR-27,Holdout20%,0.085977,-0.00099,0.001,6.0806,Holdout

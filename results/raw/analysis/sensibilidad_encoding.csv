@@ -1,0 +1,3 @@
+modelo,encoding,n_features,RMSE_usd,MAE_usd
+OLS,continuo (actual),27,151.1865,75.1771
+OLS,one-hot,31,144.7193,72.2473

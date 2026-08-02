@@ -1,0 +1,9 @@
+estrategia,config,lambda,intercepto_penalizado,MAE_mediana_folds,MAE_mediana_folds_clip,MAE_folds
+SpatialBlock,a_pen_l0.1,0.1,True,109.42,98.93,"[35.7, 131.5, 109.4, 137.9, 47.9]"
+SpatialBlock,b_nopen_l0.1,0.1,False,94.47,86.05,"[32.4, 122.5, 102.1, 94.5, 37.4]"
+SpatialBlock,c_nopen_l1,1.0,False,76.74,76.73,"[29.7, 82.9, 102.0, 76.7, 35.5]"
+SpatialBlock,d_nopen_l10,10.0,False,68.38,68.38,"[29.0, 74.4, 104.6, 68.4, 34.5]"
+SpatialBlock_buf,a_pen_l0.1,0.1,True,154.38,139.65,"[71.2, 30924507.4, 404.7, 154.4, 98.8]"
+SpatialBlock_buf,b_nopen_l0.1,0.1,False,85.88,85.52,"[61.8, 2799723.6, 207.9, 85.9, 57.8]"
+SpatialBlock_buf,c_nopen_l1,1.0,False,78.36,78.31,"[58.2, 196.2, 167.9, 78.4, 50.9]"
+SpatialBlock_buf,d_nopen_l10,10.0,False,82.85,82.84,"[58.7, 149.3, 149.7, 82.8, 59.5]"

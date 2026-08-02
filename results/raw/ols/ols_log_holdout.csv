@@ -1,0 +1,2 @@
+modelo,estrategia,n_test,MAE,RMSE,MAPE,R2,R2_log
+OLS,Holdout20%,1011,72.2611,144.7173,41.7006,0.5792,0.6494

@@ -1,0 +1,5 @@
+modelo,estrategia,I,EI,tipo
+OLS,RandomKFold,0.515651,-0.000248,CV_OOS
+OLS,SpatialBlock,0.590296,-0.000248,CV_OOS
+OLS,SpatialBlock_buf,0.68336,-0.000248,CV_OOS
+OLS,Holdout20%,0.341249,-0.00099,Holdout
