@@ -1,5 +1,5 @@
-# Security and sensitive-data reporting
+# Seguridad y reporte de datos sensibles
 
-This repository must not contain cadastral identifiers, point-level coordinates, market observations, individual predictions, credentials, or restricted municipal layers.
+Este repositorio no debe contener identificadores catastrales, coordenadas individuales, observaciones del estudio de mercado, predicciones por predio, credenciales ni capas municipales restringidas.
 
-If you find accidentally published sensitive material, do not open a public issue. Use GitHub's private vulnerability reporting for this repository or contact the repository owner privately through their GitHub profile.
+Si encuentra material sensible publicado por error, no abra una incidencia pública. Utilice el reporte privado de vulnerabilidades de GitHub para este repositorio o contacte en privado al propietario mediante su perfil de GitHub.

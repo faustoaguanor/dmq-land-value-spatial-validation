@@ -1,4 +1,4 @@
-# Model card
+# Ficha de modelos
 
 ## Propósito
 
@@ -7,7 +7,7 @@ Comparar modelos de predicción del precio de oferta del suelo urbano bajo inter
 ## Modelos focales
 
 - OLS: referencia lineal global.
-- GWR: regresión local con bandwidth seleccionado dentro de cada fold e intercepto no penalizado.
+- GWR: regresión local con ancho de banda seleccionado dentro de cada partición e intercepto no penalizado.
 - Random Forest: control tabular no espacial fuerte.
 - GNNWR: red que aprende pesos a partir de la proximidad geográfica.
 - SANNWR: ponderación neuronal espacial y atributiva con `alpha=0.5`.
@@ -33,7 +33,7 @@ Comparar modelos de predicción del precio de oferta del suelo urbano bajo inter
 - Multicolinealidad severa entre variables de accesibilidad.
 - Autocorrelación residual significativa en todos los modelos focales.
 - Tendencia a subestimar sectores de mayor valor.
-- El holdout fue reutilizado durante el desarrollo y se interpreta como evidencia descriptiva interna.
+- El conjunto de prueba fue reutilizado durante el desarrollo y se interpreta como evidencia descriptiva interna.
 
 ## Revisión humana
 

@@ -1,4 +1,4 @@
-# DMQ land-value models under random and spatial validation
+# Modelos del precio del suelo urbano del DMQ bajo validación aleatoria y espacial
 
 [![Quality checks](https://github.com/faustoaguanor/dmq-land-value-spatial-validation/actions/workflows/quality.yml/badge.svg)](https://github.com/faustoaguanor/dmq-land-value-spatial-validation/actions/workflows/quality.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -15,13 +15,13 @@ Código y resultados agregados de la tesis:
 
 ## Idea central
 
-El repositorio compara cinco modelos —OLS, GWR, Random Forest, GNNWR y SANNWR— bajo esquemas de evaluación con separación geográfica creciente. El aporte no es una arquitectura nueva: es un protocolo reproducible que muestra que el modelo aparentemente ganador cambia cuando entrenamiento y prueba dejan de estar espacialmente entremezclados.
+El repositorio compara cinco modelos (OLS, GWR, Random Forest, GNNWR y SANNWR) bajo esquemas de evaluación con separación geográfica creciente. El aporte no es una arquitectura nueva: es un protocolo reproducible que muestra que el modelo aparentemente ganador cambia cuando entrenamiento y prueba dejan de estar espacialmente entremezclados.
 
 ![Comparación de esquemas de validación](results/figures/validation_comparison.png)
 
 ## Resultados principales
 
-| Modelo | Holdout RMSE | RandomKFold RMSE | SpatialBlock RMSE |
+| Modelo | Conjunto de prueba RMSE | Validación cruzada aleatoria RMSE | Validación por bloques espaciales RMSE |
 |---|---:|---:|---:|
 | Random Forest | **76.99** | **80.9 ± 3.3** | 108.8 ± 60.4 |
 | SANNWR | 92.70 | 93.5 ± 5.4 | 98.7 ± 50.6 |
@@ -29,13 +29,13 @@ El repositorio compara cinco modelos —OLS, GWR, Random Forest, GNNWR y SANNWR�
 | GNNWR | 98.76 | 91.4 ± 21.8 | **98.5 ± 53.1** |
 | OLS | 139.01 | 141.7 ± 7.5 | 135.8 ± 74.1 |
 
-Métricas en USD/m². Holdout usa retransformación con *smearing* de Duan. En SpatialBlock, la dispersión corresponde a los cinco bloques territoriales; no debe confundirse con la variación entre semillas.
+Métricas en USD/m². El conjunto de prueba usa retransformación con *smearing* de Duan. En la validación por bloques espaciales, la dispersión corresponde a los cinco bloques territoriales; no debe confundirse con la variación entre semillas.
 
 Hallazgos:
 
 - Random Forest domina la interpolación, sin usar coordenadas.
-- Al pasar del holdout a SpatialBlock, su RMSE aumenta 41.3 % y cae al tercer puesto compartido.
-- GNNWR encabeza SpatialBlock y es el único modelo competitivo que no se degrada respecto del holdout.
+- Al pasar del conjunto de prueba a la validación por bloques espaciales, su RMSE aumenta 41.3 % y cae al tercer puesto compartido.
+- GNNWR encabeza la validación por bloques espaciales y es el único modelo competitivo que no se degrada respecto del conjunto de prueba.
 - Con solo cinco regiones, la ventaja de GNNWR/SANNWR frente a Random Forest no alcanza significancia robusta: se reporta como tendencia, no como superioridad establecida.
 - Ningún modelo elimina la autocorrelación residual.
 
@@ -53,8 +53,8 @@ Consulta [`DATA_AVAILABILITY.md`](DATA_AVAILABILITY.md) para conocer las fuentes
 
 ```text
 ├── data_pipeline/       integración de las seis fuentes institucionales
-├── data_split/          generación determinista del holdout
-├── spatial_cv/          RandomKFold, SpatialBlock y separación con buffer
+├── data_split/          generación determinista del conjunto de prueba
+├── spatial_cv/          validación aleatoria, bloques espaciales y separación estricta
 ├── modelos/             modelos focales y variantes de anexo
 ├── analisis/            inferencia, sensibilidad e interpretabilidad
 ├── eda/                 análisis exploratorio reproducible
@@ -144,7 +144,7 @@ python -m compileall -q .
 python -m unittest discover -s tests -v
 ```
 
-La integración dataset–holdout–folds se valida adicionalmente cuando el dataset autorizado está disponible.
+La integración del conjunto integrado, la partición de prueba y los bloques se valida adicionalmente cuando los datos autorizados están disponibles.
 
 ## Uso responsable
 
