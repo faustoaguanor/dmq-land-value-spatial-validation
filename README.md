@@ -6,7 +6,7 @@
 
 Código y resultados agregados de la tesis:
 
-> **Comparación de modelos predictivos del precio del suelo urbano bajo validación aleatoria y espacial para el catastro del Distrito Metropolitano de Quito**
+> **Evaluación comparativa de modelos predictivos del precio de oferta del suelo urbano bajo esquemas de validación aleatoria y espacial en el Distrito Metropolitano de Quito**
 
 **Autor:** Fausto Alejandro Guano Rojas<br>
 **Programa:** Maestría en Ciencia de Datos, Yachay Tech<br>
